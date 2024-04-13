@@ -394,9 +394,9 @@
             </div>
         </section>
 
-        <section class="why-choose section">
+        <section class="why-choose section" >
 
-            <div class=container>
+            <div class=container >
                 <div class=emicalculatorcontainer id="printContainer">
                     <div id=loanformcontainer>
                         <div id=emicalculatordashboard>
@@ -602,7 +602,13 @@
                     </div>
                 </div>
                                          
-                <div class="btn-grouplc mt_40 mb_35"><button onclick="saveAsPDF()">
+            
+
+            </div>
+
+        </section> 
+        <section class="pdfbutton">
+        <div class="btn-grouplc mt_40"><button onclick="saveAsPDF()">
                     <span class="btn-filled">
                         <span class="position-relative z-3">Save as PDF <!-- --> 
                         </span>
@@ -611,10 +617,8 @@
                     </span>
                     </button>
                 </div>
+        </section>
 
-            </div>
-
-        </section> 
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
@@ -628,13 +632,15 @@
             var currentDate = new Date();
             var formattedDate = currentDate.toISOString().slice(0,10);
             var filename = 'excellent_finance_' + formattedDate + '.pdf';
+//            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//            var responsiveWidth = screenWidth * 0.9; // Adjust the percentage as needed
 
             // Create a PDF using pdfmake with watermark added to the content
             var pdf = pdfMake.createPdf({
                 content: [
                     {
                         image: imgData,
-                        width: 480 // Set the width based on your requirements
+                        width: 475                        
                     }
                 ]
             });
@@ -644,6 +650,8 @@
         });
     }
 </script>
+
+
 
         
 
